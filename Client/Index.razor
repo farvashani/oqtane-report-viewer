@@ -1,0 +1,63 @@
+@using Tres.ReportViewers.Services
+@using Tres.ReportViewers.Models
+
+@namespace Tres.ReportViewers.Modules
+@inherits ModuleBase
+@inject NavigationManager NavigationManager
+@inject HttpClient http
+@inject SiteState sitestate
+
+<ActionLink EditMode="false" Action="Investments" />
+<ActionLink EditMode="false" Action="Sales" />
+
+<br /><br />
+
+<select class="custom-select" @onchange="ChangeComponent">
+    <option value="Investments" selected>Investments</option>
+    <option value="Sales">Sales</option>
+</select>
+<br /><br />
+
+@DynamicComponent
+
+@code {
+
+    string _selectedComponent="";
+
+    RenderFragment DynamicComponent { get; set; }
+
+    protected override void OnInitialized()
+    {
+        BuildTree("Investments");
+    }
+
+    private void ChangeComponent(ChangeEventArgs e)
+    {
+        _selectedComponent = ((string)e.Value);
+
+        BuildTree(_selectedComponent);
+
+    }
+
+    private void BuildTree(string componentName)
+    {
+        string FQDN = "Tres.ReportViewers.Modules." + componentName; //complete name
+
+        Type componentType = Type.GetType(FQDN);
+
+        if (componentType != null)
+        {
+            DynamicComponent = builder =>
+            {
+                builder.OpenComponent(0, componentType);
+                builder.AddAttribute(1, "ReportTitle", componentName);
+                builder.CloseComponent();
+            };
+        }
+        else
+        {
+            // component does not exist with typename specified
+        }
+
+    }
+}
