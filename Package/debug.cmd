@@ -4,3 +4,4 @@ XCOPY "..\Server\bin\Debug\netcoreapp3.1\Tres.ReportViewers.Server.Oqtane.dll" "
 XCOPY "..\Server\bin\Debug\netcoreapp3.1\Tres.ReportViewers.Server.Oqtane.pdb" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\netcoreapp3.1\" /Y
 XCOPY "..\Shared\bin\Debug\netstandard2.1\Tres.ReportViewers.Shared.Oqtane.dll" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\netcoreapp3.1\" /Y
 XCOPY "..\Shared\bin\Debug\netstandard2.1\Tres.ReportViewers.Shared.Oqtane.pdb" "..\..\oqtane.framework\Oqtane.Server\bin\Debug\netcoreapp3.1\" /Y
+XCOPY "..\Server\wwwroot\Modules\Tres.ReportViewers\*" "..\..\oqtane.framework\Oqtane.Server\wwwroot\Modules\Tres.Products\" /Y /S /I

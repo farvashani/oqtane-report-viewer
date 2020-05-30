@@ -1,7 +1,7 @@
 @using Tres.ReportViewers.Services
 @using Tres.ReportViewers.Models
 
-@namespace Tres.ReportViewers.Modules
+@namespace Tres.ReportViewers
 @inherits ModuleBase
 @inject NavigationManager NavigationManager
 @inject HttpClient http
@@ -41,7 +41,7 @@
 
     private void BuildTree(string componentName)
     {
-        string FQDN = "Tres.ReportViewers.Modules." + componentName; //complete name
+        string FQDN = "Tres.ReportViewers." + componentName; //complete name
 
         Type componentType = Type.GetType(FQDN);
 

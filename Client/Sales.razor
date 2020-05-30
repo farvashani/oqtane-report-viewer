@@ -1,13 +1,13 @@
 @using Tres.ReportViewers.Services
 @using Tres.ReportViewers.Models
 
-@namespace Tres.ReportViewers.Modules
+@namespace Tres.ReportViewers
 @inherits ModuleBase
 @inject NavigationManager NavigationManager
 @inject HttpClient http
 @inject SiteState sitestate
 
-<Tres.ReportViewers.Modules.Controls.ReportTitle Title="@ReportTitle"></Tres.ReportViewers.Modules.Controls.ReportTitle>
+<Tres.ReportViewers.Controls.ReportTitle Title="@ReportTitle"></Tres.ReportViewers.Controls.ReportTitle>
 
 <h4>Sales Report specific data</h4>
 <table class="table table-striped table-bordered table-hover">

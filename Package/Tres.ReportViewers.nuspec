@@ -20,12 +20,12 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\Client\bin\Release\netstandard2.1\Tres.ReportViewers.Client.Oqtane.dll" target="lib" /> 
-    <file src="..\Client\bin\Release\netstandard2.1\Tres.ReportViewers.Client.Oqtane.pdb" target="lib" /> 
-    <file src="..\Server\bin\Release\netcoreapp3.1\Tres.ReportViewers.Server.Oqtane.dll" target="lib" /> 
-    <file src="..\Server\bin\Release\netcoreapp3.1\Tres.ReportViewers.Server.Oqtane.pdb" target="lib" /> 
-    <file src="..\Shared\bin\Release\netstandard2.1\Tres.ReportViewers.Shared.Oqtane.dll" target="lib" /> 
-    <file src="..\Shared\bin\Release\netstandard2.1\Tres.ReportViewers.Shared.Oqtane.pdb" target="lib" /> 
+    <file src="..\Client\bin\Release\netstandard2.1\Tres.ReportViewers.Client.Oqtane.dll" target="lib\netstandard2.1" /> 
+    <file src="..\Client\bin\Release\netstandard2.1\Tres.ReportViewers.Client.Oqtane.pdb" target="lib\netstandard2.1" /> 
+    <file src="..\Server\bin\Release\netcoreapp3.1\Tres.ReportViewers.Server.Oqtane.dll" target="lib\netstandard2.1" /> 
+    <file src="..\Server\bin\Release\netcoreapp3.1\Tres.ReportViewers.Server.Oqtane.pdb" target="lib\netstandard2.1" /> 
+    <file src="..\Shared\bin\Release\netstandard2.1\Tres.ReportViewers.Shared.Oqtane.dll" target="lib\netstandard2.1" /> 
+    <file src="..\Shared\bin\Release\netstandard2.1\Tres.ReportViewers.Shared.Oqtane.pdb" target="lib\netstandard2.1" /> 
     <file src="..\wwwroot\**\*.*" target="wwwroot" /> 
   </files>
 </package>
